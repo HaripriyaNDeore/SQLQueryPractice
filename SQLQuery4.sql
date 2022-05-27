@@ -1,13 +1,8 @@
-USE [Practice]
-GO
-
-SELECT [PersonId]
-      ,[PersonName]
-      ,[city]
-  FROM [dbo].[person]
-
-GO
-
-alter table person alter column PersonId int not null
-
-alter table person add constraint pk_person primary key(PersonId)
+Create table Employee(
+EmpId int primary key identity(1,1),
+FirstName varchar(20),
+LastName varchar(20),
+Salary int,
+City varchar(20),
+DeptName varchar(20),
+)
