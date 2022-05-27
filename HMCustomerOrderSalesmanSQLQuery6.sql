@@ -201,3 +201,10 @@ select c.cust_name,c.city,c.grade
 from Cust c
 inner join Salesman1 s on s.saleman_id=c.c_id
 order by s.S_name,s.S_commision 
+
+--20.write a SQL query to find those salespersons who customer name is sachin
+select o.o_id,o.Pur_Amount,o.O_date,c.cust_name,c.grade,s.S_name,s.S_commision
+from Orders1 o 
+inner join Cust c on o.o_id=c.c_id
+inner join Salesman1 s on o.o_id=s.saleman_id
+where c.cust_name='sachin'
